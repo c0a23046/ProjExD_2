@@ -48,18 +48,19 @@ def main():
     tmr = 0
 
 
-    RIGHT_img = pg.transform.flip(kk_img, False, True) #画像の反転を作成
+    RIGHT_img = pg.transform.flip(kk_img, False, True)  # 画像の反転を作成
     LEFT_img = kk_img
     img_dict = {
-         (0, 0):pg.transform.rotozoom(LEFT_img, 0, 1.0),
-         (0, -5):pg.transform.rotozoom(RIGHT_img, -90, 1.0),
-         (+5, -5):pg.transform.rotozoom(RIGHT_img, 225, 1.0), 
-         (+5, 0):pg.transform.rotozoom(RIGHT_img, 180, 1.0),
-         (+5, +5):pg.transform.rotozoom(RIGHT_img, 135, 1.0),
-         (0, +5):pg.transform.rotozoom(RIGHT_img, 90, 1.0),
-         (-5, +5):pg.transform.rotozoom(LEFT_img, 45, 1.0),
-         (-5, 0):pg.transform.rotozoom(LEFT_img, 0, 1.0),
-         (-5, -5):pg.transform.rotozoom(LEFT_img, -45, 1.0)
+        (0, 0):pg.transform.rotozoom(LEFT_img, 0, 1.0), # こうかとん＿西向き
+        (0, -5):pg.transform.rotozoom(RIGHT_img, -90, 1.0),
+        (+5, -5):pg.transform.rotozoom(RIGHT_img, 225, 1.0), 
+        (+5, 0):pg.transform.rotozoom(RIGHT_img, 180, 1.0),
+        (+5, +5):pg.transform.rotozoom(RIGHT_img, 135, 1.0),
+        (0, +5):pg.transform.rotozoom(RIGHT_img, 90, 1.0),
+        (-5, +5):pg.transform.rotozoom(LEFT_img, 45, 1.0),
+        (-5, 0):pg.transform.rotozoom(LEFT_img, 0, 1.0),
+        (-5, -5):pg.transform.rotozoom(LEFT_img, -45, 1.0)
+        
     }
 
     while True:
